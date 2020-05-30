@@ -1,0 +1,18 @@
+//User erstellen
+use fahrstunde
+db.createUser(
+  {
+    user: "fahrstundemongo",
+    pwd: passwordPrompt(),  // or cleartext password
+    roles: [
+       { role: "readWrite", db: "fahrstunde" }
+    ]
+  }
+)
+
+
+
+
+
+//Eine Collection erstellen
+db.createCollection("personen", { capped : true, autoIndexID : true, size : 61428000, max : 1000000 } )
