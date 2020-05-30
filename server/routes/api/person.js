@@ -3,6 +3,7 @@ const mongodb = require('mongodb');
 
 const router = express.Router();
 
+const mongopfad = "mongodb://fahrstundemongo:mongodb123@localhost:27017/fahrstunde"
 
 // Get Person
 router.get('/all',async (req,res) => {
@@ -46,7 +47,7 @@ router.delete('/:id', async (req, res) => {
 
 
 async function loadPersonCollection(){
-	const client = await mongodb.MongoClient.connect('mongodb://fahrstundemongo:mongodb123@localhost:27017/fahrstunde', {
+	const client = await mongodb.MongoClient.connect(mongopfad, {
 		useNewUrlParser: true
 	});
 	return client.db('fahrstunde').collection('personen');
