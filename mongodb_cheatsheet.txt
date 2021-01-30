@@ -1,5 +1,11 @@
-//User erstellen
+//Start MongoDB
+sudo systemctl start mongod
+
+
+//DB erstellen
 use fahrstunde
+
+//User erstellen
 db.createUser(
   {
     user: "fahrstundemongo",

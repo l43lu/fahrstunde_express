@@ -1,0 +1,12 @@
+{
+"name":"name",
+"vorname":"vorname",
+"ist_schueler":"false",
+"ist_lehrer":"true",
+"adresse":{
+			"strasse":    "strasse",
+			"plz":        "plz",
+			"ort":        "ort",
+			"hausnummer": 2
+}
+}
